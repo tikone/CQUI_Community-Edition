@@ -127,7 +127,7 @@ function OnActivateIntelRelationshipPanel(relationshipInstance : table)
     relationshipScoreText = "[COLOR_Grey]" .. relationshipScoreText .. "[ENDCOLOR]";
   end
 
-  intelSubPanel.RelationshipScore:SetText(relationshipScoreText);
+  intelSubPanel.RelationshipText:SetText(relationshipScoreText);
 
   local toolTips = selectedPlayerDiplomaticAI:GetDiplomaticModifiers(ms_LocalPlayerID);
   local reasonsTotalScore = 0;
@@ -155,12 +155,12 @@ function OnActivateIntelRelationshipPanel(relationshipInstance : table)
     reasonsTotalScoreText = "[COLOR_Grey]" .. reasonsTotalScoreText .. "[ENDCOLOR]";
   end
 
-  if (hasReasonEntries) then
+  --[[if (hasReasonEntries) then
     intelSubPanel.RelationshipReasonsTotal:SetHide(false);
     intelSubPanel.RelationshipReasonsTotalScorePerTurn:SetText(reasonsTotalScoreText);
   else
     intelSubPanel.RelationshipReasonsTotal:SetHide(true);
-  end
+  end--]]
 
   BASE_OnActivateIntelRelationshipPanel(intelSubPanel);
 end
